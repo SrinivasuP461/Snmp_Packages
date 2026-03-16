@@ -5,3 +5,4 @@ clr_loader-0.2.7.post0-py3-none-any.whl
 
 
 python 3.13.5 version is needed
+python-3.13.5-amd64
