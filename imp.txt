@@ -2,3 +2,6 @@ altgraph-0.17.4-py2.py3-none-any.whl
 bottle-0.13.4-py2.py3-none-any.whl
 cffi-1.17.1-cp313-cp313-win_amd64.whl
 clr_loader-0.2.7.post0-py3-none-any.whl
+
+
+python 3.13.5 version is needed
