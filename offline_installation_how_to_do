@@ -1,0 +1,79 @@
+
+============================
+OFFLINE INSTALL PACKAGES
+============================
+
+To install **PyInstaller**, **pywebview**, and **pyttsx3** offline in **Windows**, follow these steps:
+
+---
+
+### ✅ Step 1: Set Up an Online Environment to Download Dependencies
+
+Use a system **with internet access** to download the necessary packages and their dependencies.
+
+#### 1.1 Create a directory to store the packages
+
+```bash
+mkdir offline_packages
+cd offline_packages
+```
+
+#### 1.2 Use `pip download` to fetch packages
+
+```bash
+pip download pyinstaller pywebview pyttsx3
+```
+
+This command downloads:
+
+* the specified packages
+* all their dependencies
+* as `.whl` or `.tar.gz` files
+
+---
+
+### ✅ Step 2: Transfer the Packages
+
+Copy the entire `offline_packages` folder to the **offline Windows machine** (via USB, shared network, etc.).
+
+---
+
+### ✅ Step 3: Install Packages Offline
+
+#### 3.1 Open Command Prompt or PowerShell
+
+Navigate to the folder where you've copied the packages:
+
+```bash
+cd path\to\offline_packages
+```
+
+#### 3.2 Install packages using `pip install` with `--no-index`
+
+```bash
+pip install --no-index --find-links=. pyinstaller pywebview pyttsx3
+```
+
+* `--no-index` tells pip not to use the internet.
+* `--find-links=.` points pip to the current directory for packages.
+
+---
+
+### ✅ Step 4: Verify Installation
+
+After installing, you can verify everything is working by importing the packages:
+
+```python
+python -c "import PyInstaller, pywebview, pyttsx3; print('All packages imported successfully.')"
+```
+
+---
+
+### Notes
+
+* If you're using a **virtual environment**, make sure it's activated before running the install commands.
+* Use the same Python version in the online and offline environments to avoid compatibility issues with wheels.
+
+---
+
+Would you like a script to automate this process?
